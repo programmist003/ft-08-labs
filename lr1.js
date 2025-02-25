@@ -36,3 +36,12 @@ function isNonHypotenuse(n) {
     else
         return true;
 }
+
+function main() {
+    alert("Данная программа сообщит, является ли число негипотенузным или нет")
+
+    n = prompt("Введите число")
+    alert("Число" + isNonHypotenuse(n) ? "негипотенузно" : "может являться гипотенузой")
+}
+
+main()
