@@ -1,4 +1,7 @@
+"use strict"
+
 function isNonHypotenuse(n) {
+
     // 2 is a prime number but
     // not of the form 4k+1
     // so, keep Dividing n by 2
@@ -9,7 +12,7 @@ function isNonHypotenuse(n) {
 
     // n must be odd at this point. So we can skip
     // one element (Note i = i +2)
-    for (i = 3; i <= sqrt(n); i = i + 2) {
+    for (let i = 3; i <= Math.sqrt(n); i = i + 2) {
 
         // if i divides n
         // check if i is of the form
@@ -40,8 +43,9 @@ function isNonHypotenuse(n) {
 function main() {
     alert("Данная программа сообщит, является ли число негипотенузным или нет")
 
-    n = prompt("Введите число")
-    alert("Число" + isNonHypotenuse(n) ? "негипотенузно" : "может являться гипотенузой")
+    let n = parseInt(prompt("Введите число"))
+    console.log(n)
+    alert("Число " + ["негипотенузно", "может являться гипотенузой"][Number(!isNonHypotenuse(n))])
 }
 
 main()
